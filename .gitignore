@@ -1,2 +1,3 @@
 /mv/vendor
-mv/composer.lock
+/mv/composer.lock
+/mv/.env
