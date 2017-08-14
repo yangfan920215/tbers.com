@@ -1,0 +1,290 @@
+<include file="Public/head"/>
+
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <form class="form-horizontal" id="form" method="post" action="{:U('update')}">
+                            <input name="varname" type="hidden" value="{$var.id}">
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 渠道账户 </label>
+                                <div class="col-sm-9">
+                                    <input type="text"  readonly name="user" id="user" placeholder="渠道账户"
+                                    class="col-xs-10 col-sm-5" value="{$var.user}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+                                </div>
+                            </div>
+
+                            <if condition="$var['edit']">
+                                <input type="hidden" name="uid" id="uid" placeholder="渠道密码" value="{$var['uid']}">
+                            </if>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3"> 网站域名 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="dom" id="dom" placeholder="网站域名"
+                                           class="col-xs-10 col-sm-5" value="{$var.dom}" readonly>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*：最大可输入100个字符</span>
+											</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="id-date-picker-1">域名截止时间</label>
+                                <div class="col-xs-9 col-sm-9">
+                                    <div class="input-group col-xs-5">
+
+                                        <input readonly class="form-control" id="dom_time" name="dom_time" value="{$var.dom_time}" type="text" data-date-format="dd-mm-yyyy" />
+                                        <span class="input-group-addon">
+													<i class="ace-icon fa fa-calendar bigger-110"></i>
+												</span>
+                                        <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*：日期型</span>
+											</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-4"> 代理名称 </label>
+                                <div class="col-sm-9">
+                                    <input readonly type="text" name="_name" id="_name" placeholder="代理名称" class="col-xs-10 col-sm-5"
+                                           value="{$var._name}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*：最大可输入50个字符</span>
+											</span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-5"> 代理奖金组 </label>
+                                <div class="col-sm-9">
+                                    <input readonly type="text" name="gold_group" id="gold_group" placeholder="代理奖金组" class="col-xs-10 col-sm-5"
+                                           value="{$var.gold_group}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*：最大可输入20个字符</span>
+											</span>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-6"> 代理昵称 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="nickname" id="nickname" placeholder="代理昵称" class="col-xs-10 col-sm-5"
+                                           value="{$var.nickname}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-7"> 显示金额 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="gold_show" id="gold_show" placeholder="显示金额" class="col-xs-10 col-sm-5" value="{$var.gold_show}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-8"> QQ </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="qq_json" id="qq_json" placeholder="QQ" class="col-xs-10 col-sm-5"
+                                           value="{$var.qq_json}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">最多填写三个，用逗号(,)分割 建议QQ开启<b>临时会话</b>功能</span>
+											</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-9"> 开户链接1 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="_url1" id="_url1" placeholder="开户链接1" class="col-xs-10 col-sm-5"
+                                           value="{$var._url1}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-10"> 开户链接2 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="_url2" id="_url2" placeholder="开户链接2" class="col-xs-10 col-sm-5"
+                                           value="{$var._url2}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-12"> 轮播图 </label>
+                                <div class="col-sm-9">
+                                    <div class="col-xs-5 col-sm-1">{:UpImage("head1",100,100,$var['head1'], 1)}</div>
+                                    <div class="col-xs-5 col-sm-1">{:UpImage("head2",100,100,$var['head2'], 1)}</div>
+                                    <div class="col-xs-5 col-sm-1">{:UpImage("head3",100,100,$var['head3'], 1)}</div>
+                                    <div class="col-xs-5 col-sm-1">{:UpImage("head4",100,100,$var['head4'], 1)}</div>
+                                    <div class="col-xs-5 col-sm-1">{:UpImage("head5",100,100,$var['head5'], 1)}</div>
+                                    <span class="help-inline col-xs-12 col-sm-5">
+                                        <span class="middle">仅支持jpg、gif、png、bmp、jpeg，且小于500KB。</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info submit" type="button">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        $(".btn-info.submit").click(function () {
+            var nickname = $("#nickname").val();
+            var gold_show = $("#gold_show").val();
+            var _url1 = $("#_url1").val();
+            var _url2 = $("#_url2").val();
+
+            /*代理名称长度*/
+            if (nickname.length < 1 || nickname.length > 30) {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "代理昵称必须填写,且最多可输入30个字符。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+
+           if (nickname.length > 30) {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "代理昵称不能超过十个汉字。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+
+            /*代理名称长度*/
+            if (!checkNum(gold_show) || gold_show > 999999999.99 || gold_show < 0) {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "显示金额必须填写,且最多輸入9位數, 2位小數。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+
+            if (_url1.length != 0 && (!checkUrl(_url1) || _url1.length > 200)) {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "开户链接1若填写必须符合格式,例：http://www.google.com。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+
+            if (_url2.length != 0 && (!checkUrl(_url2) || _url1.length > 200)) {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "开户链接2若填写必须符合格式,例：http://www.google.com。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+
+            $("#form").submit();
+        });
+    });
+</script>
+<script src="__PUBLIC__/qwadmin/js/date-time/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('#dom_time').datepicker({
+            format: 'yyyy-mm-dd',
+            weekStart: 1,
+            autoclose: true,
+            todayBtn: 'linked',
+            language: 'cn'
+        });
+    });
+</script>
+</body>
+</html>
