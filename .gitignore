@@ -1,3 +1,7 @@
-/mv/vendor
-/mv/composer.lock
-/mv/.env
+/mge/mge-api/vendor
+/mge/mge-api/composer.lock
+/mge/mge-api/.env
+
+/mge/mge-email/vendor
+/mge/mge-email/composer.lock
+/mge/mge-email/.env
