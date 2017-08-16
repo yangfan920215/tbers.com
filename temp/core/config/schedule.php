@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'withdraw'   => 'withdraw',
+    'recommend_activity'   => 'recommend_activity',
+    'stat'       => 'stat',
+    'account'    => 'account',
+    'CheckSecurityCode'    => 'CheckSecurityCode',
+    'SetWithdrawable'    => 'SetWithdrawable',
+    'GenerateDayCommissionForUserBetRecord'    => 'GenerateDayCommissionForUserBetRecord',
+    'GenerateBonusForUserBetRecord'    => 'GenerateBonusForUserBetRecord',
+    'CheckPtActivityStatus'    => 'CheckPtActivityStatus',
+    'CheckImActivityStatus'    => 'CheckImActivityStatus',
+    'CheckAgActivityStatus'    => 'CheckAgActivityStatus',
+    'CheckHbActivityStatus'    => 'CheckHbActivityStatus',
+    'CheckMgActivityStatus'    => 'CheckMgActivityStatus',
+    'CalculateUserBetRecordForPt'    => 'CalculateUserBetRecordForPt',
+    'CalculateUserBetRecordForIm'    => 'CalculateUserBetRecordForIm',
+    'CalculateUserBetRecordForAg'    => 'CalculateUserBetRecordForAg',
+    'CalculateUserBetRecordForHb'    => 'CalculateUserBetRecordForHb',
+    'CalculateUserBetRecordForMg'    => 'CalculateUserBetRecordForMg',
+    'CalculateUserBetReportForPt'    => 'CalculateUserBetReportForPt',
+    'CalculateUserBetReportForIm'    => 'CalculateUserBetReportForIm',
+    'CalculateUserBetReportForAg'    => 'CalculateUserBetReportForAg',
+    'CalculateUserBetReportForHb'    => 'CalculateUserBetReportForHb',
+    'CalculateUserBetReportForMg'    => 'CalculateUserBetReportForMg',
+];
