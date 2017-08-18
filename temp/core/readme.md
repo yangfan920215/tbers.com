@@ -19,3 +19,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+1. 获取目录结构
+2. 获取资源信息（根据唯一参数）

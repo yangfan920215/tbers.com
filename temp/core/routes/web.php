@@ -12,30 +12,15 @@
 */
 
 $app->group(['middleware' => 'dom'], function () use ($app) {
-// 站点初始信息下发
-    $app->get('/init', 'IndexController@init');
+    // 获取资源目录
+    $defaultController = 'IndexController';
+    $app->get('/avgleinit', $defaultController . '@avgleInit');
+    $app->post('/contact', $defaultController . '@contact');
+    // 索引视频
+    $app->get('/archive', $defaultController . '@archive');
 
 
-// 查询某个渠道下的游戏列表
-    $app->post('/games', 'IndexController@games');
-    $app->options('/games', 'IndexController@games');
-// 用户注册
-    $app->post('/register', 'IndexController@register');
-    $app->options('/register', 'IndexController@register');
-// 登录接口
-    $app->post('/login',  'IndexController@login');
-    $app->options('/login',  'IndexController@login');
-// 重设密码
-    $app->post('/resetpassword', 'IndexController@resetpassword');
-    $app->options('/resetpassword', 'IndexController@resetpassword');
 
-/*    $app->group(['prefix' => 'user'], function () use ($app) {
-        $User = 'UserController@';
-    });*/
-
-    /**
-     * 钱包管理控制器
-     */
     $app->group(['prefix' => 'wallet', 'middleware' => 'token'], function () use ($app) {
         $User = 'WalletController@';
         $app->post('/', $User . 'index');
