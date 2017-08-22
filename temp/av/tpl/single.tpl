@@ -1,13 +1,13 @@
-{include './public/header.tpl' title='今日首发-日日精彩single'}
+<{include './public/header.tpl' title='今日首发-日日精彩single'}>
 <!-- Header -->
-	
+
 	<!-- /////////////////////////////////////////Content -->
 	<div id="page-content" class="single-page">
 		<div class="container">
 			<div class="row">
 				<div id="main-content" class="col-md-8">
 					<div class="wrap-vid">
-						<iframe width="100%" height="400" src="https://www.youtube.com/embed/lBFixEzpmSY" frameborder="0" allowfullscreen></iframe>
+						<iframe width="100%" height="400" src="https://avgle.com/embed/<{$av}>" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<div class="share">
 						<ul class="list-inline center">
@@ -22,7 +22,7 @@
 					<h1 class="vid-name"><a href="#">片子里的老公好惨</a></h1>
 					<div class="info">
 						<h5>By <a href="#">phoenix</a></h5>
-						<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+						<span><i class="fa fa-calendar"></i>25/3/2015</span>
 						<span><i class="fa fa-heart"></i>1,200</span>
 					</div>
 					<p style="margin-top: 20px">大奶狂热 仓多真央 おっぱい好きの「触りたい」「揉みたい」「挟まれたい」「埋まりたい」すべての愿望を叶える本作品。今回は95センチHカップのロケットおっぱいの持ち主,仓多まおちゃんが登场!!私,乳首が弱くて责められると直ぐビンビンに立っちゃうんですとの言叶通り,男优の执拗な责めでビンビンに立ちまくる敏感乳首。パイズリではあまりの气持良さにプロの男优も暴发寸前!!おっぱいマニアにオススメの作品です。※ 。</p>
@@ -56,7 +56,7 @@
 									 <!--<div class="form-group">
 										<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
 										placeholder="Message"></textarea>
-									</div>-->					
+									</div>-->
 									<button type="submit" class="btn btn-4 btn-block" name="btnSend" id="btnSend">
 								提交</button>
 								</div>
@@ -85,7 +85,7 @@
 										<h3 class="vid-name"><a href="#">片子里的老公好惨</a></h3>
 										<div class="info">
 											<h5>By <a href="#">phoenix</a></h5>
-											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+											<span><i class="fa fa-calendar"></i>25/3/2015</span>
 											<span><i class="fa fa-heart"></i>1,200</span>
 										</div>
 									</div>
@@ -105,7 +105,7 @@
 										<h3 class="vid-name"><a href="#">片子里的老公好惨</a></h3>
 										<div class="info">
 											<h5>By <a href="#">phoenix</a></h5>
-											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+											<span><i class="fa fa-calendar"></i>25/3/2015</span>
 											<span><i class="fa fa-heart"></i>1,200</span>
 										</div>
 									</div>
@@ -125,7 +125,7 @@
 										<h3 class="vid-name"><a href="#">片子里的老公好惨</a></h3>
 										<div class="info">
 											<h5>By <a href="#">phoenix</a></h5>
-											<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+											<span><i class="fa fa-calendar"></i>25/3/2015</span>
 											<span><i class="fa fa-heart"></i>1,200</span>
 										</div>
 									</div>

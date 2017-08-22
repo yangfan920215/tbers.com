@@ -38,6 +38,12 @@ $smarty->setCompileDir('./static/templates_c');
 // 判断入口
 $urls = parse_url('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 
+
+if (substr($urls['path'], 0, 7) === '/single'){
+    $av = substr($urls['path'], 8);
+    $urls['path'] = '/single';
+}
+
 $tpl = './tpl' . $urls['path'] . '.tpl';
 
 $ret = file_exists($tpl);
@@ -98,6 +104,9 @@ switch ($file){
             $data = json_decode($response->getBody(), true);
             $data = $data['data'];
 
+            foreach ($data['searchs'] as &$search) {
+                $search['addtime'] = date('Y-m-d H:i:s', $search['addtime']);
+            }
 
             $smarty->assign('searchs', $data['searchs']);
         } catch (GuzzleHttp\Exception\GuzzleException $e) {
@@ -105,11 +114,35 @@ switch ($file){
             exit;
         }
         break;
+    case './tpl/single.tpl':
+        $client = new  GuzzleHttp\Client([
+            // Base URI is used with relative requests
+            'base_uri' => 'http://av.app/',
+            // You can set any number of default request options.
+            'timeout'  => 10.0,
+        ]);
 
+        try {
+            // 获取数据
+            $response = $client->get('http://core.app/avgleinit');
+            $data = json_decode($response->getBody(), true);
+            $data = $data['data'];
+
+            $smarty->assign('av', $av);
+        } catch (GuzzleHttp\Exception\GuzzleException $e) {
+            echo (string) $e->getResponse()->getBody();
+            exit;
+        }
+
+        $video_url = isset($_GET['video']) ? $_GET['video'] : header('./index');
+        break;
 }
-/*echo '<pre>';
-print_r(array_chunk($data['categories'],3));
-exit;*/
+
+
+
+foreach ($data['hotVideos'] as &$hotVideo){
+    $hotVideo['embedded_url_path'] = parse_url($hotVideo['embedded_url'])['path'];
+}
 
 // 轮播热门视频
 $smarty->assign('hotVideos', $data['hotVideos']);

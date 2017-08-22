@@ -124,7 +124,7 @@
                     <div class="zoom-container">
                         <div class="zoom-caption">
                             <span><{$hotVideo['keyword']}></span>
-                            <a href="/single?v=<{$hotVideo['vid']}>">
+                            <a href="single<{$hotVideo['embedded_url_path']}>">
                                 <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
                             </a>
                             <p><{$hotVideo['title']}></p>

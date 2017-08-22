@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-18 17:20:29
+<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-22 11:25:22
          compiled from "./tpl/archive.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16903916445996a4eccc9510-41976012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '553729cb68b6aa05054562f7d38e18e29525bbd8' => 
     array (
       0 => './tpl/archive.tpl',
-      1 => 1503048012,
+      1 => 1503372317,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1-DEV',
   'unifunc' => 'content_5996a4ecccb7d3_34600475',
+  'variables' => 
+  array (
+    'searchs' => 0,
+    'search' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5996a4ecccb7d3_34600475')) {function content_5996a4ecccb7d3_34600475($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('./public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'今日首发-archive'), 0);?>
@@ -28,13 +33,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="container">
 			<div class="row">
 				<div id="main-content" class="col-md-8">
+					<?php  $_smarty_tpl->tpl_vars['search'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['search']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['searchs']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['search']->key => $_smarty_tpl->tpl_vars['search']->value){
+$_smarty_tpl->tpl_vars['search']->_loop = true;
+?>
 					<article>
-						<a href="#"><h2 class="vid-name">只有各位老师才是永恒的</h2></a>
+						<a href="#"><h2 class="vid-name"><?php echo $_smarty_tpl->tpl_vars['search']->value['keyword'];?>
+</h2></a>
 						<div class="info">
-							<h5>By <a href="#">phoenix</a></h5>
-							<span><i class="fa fa-calendar"></i> June 12, 2015</span> 
+							<h5>By <a href="#"> Matt </a></h5>
+							<span><i class="fa fa-calendar"></i> <?php echo $_smarty_tpl->tpl_vars['search']->value['addtime'];?>
+ </span>
 							<span><i class="fa fa-comment"></i> 0 Comments</span>
-							<span><i class="fa fa-heart"></i>1,200</span>
+							<span><i class="fa fa-heart"></i> 0 </span>
 							<ul class="list-inline">
 								<li><a href="#" style="text-decoration: underline;color:#333;">Rate</a></li>
 								<li> - </li>
@@ -52,162 +64,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="wrap-vid">
 							<div class="zoom-container">
 								<div class="zoom-caption">
-									<span>标签分类</span>
-									<a href="single.html">
+									<span><?php echo $_smarty_tpl->tpl_vars['search']->value['keyword'];?>
+</span>
+									<a href="single?vid=<?php echo $_smarty_tpl->tpl_vars['search']->value['vid'];?>
+">
 										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
 									</a>
-									<p>片子里的老公好惨</p>
+									<p></p>
 								</div>
-								<img src="../images/9.jpg" />
+								<img src="<?php echo $_smarty_tpl->tpl_vars['search']->value['preview_url'];?>
+" />
 							</div>
-							<p>搭讪素人美女带回家让她看到惊呆, 狂摸18公分大屌! 硬上插进她的粉嫩肉屄操到爽! ナンパ男のデカチン18cmを「ありえないウソだ」と言う美女にみるだけと房间に连れ込んで见せて触らせて「うわ!デカっ!こんなの入らな~い!うっぅぅ」とデカチンを插入!パコる!それも美女限定!一部始终を偷拍! <a href="#">更多...</a></p>
+							<p> <?php echo $_smarty_tpl->tpl_vars['search']->value['title'];?>
+<!-- <a href="#">更多...</a> --></p>
 						</div>
 					</article>
 					<div class="line"></div>
-					<article>
-						<a href="#"><h2 class="vid-name">只有各位老师才是永恒的</h2></a>
-						<div class="info">
-							<h5>By <a href="#">phoenix</a></h5>
-							<span><i class="fa fa-calendar"></i> June 12, 2015</span> 
-							<span><i class="fa fa-comment"></i> 0 Comments</span>
-							<span><i class="fa fa-heart"></i>1,200</span>
-							<ul class="list-inline">
-								<li><a href="#" style="text-decoration: underline;color:#333;">Rate</a></li>
-								<li> - </li>
-								<li>
-									<span class="rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-half-o"></i>
-									</span>
-								</li>
-							</ul>
-						</div>
-						<div class="wrap-vid">
-							<div class="zoom-container">
-								<div class="zoom-caption">
-									<span>标签分类</span>
-									<a href="single.html">
-										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-									</a>
-									<p>片子里的老公好惨</p>
-								</div>
-								<img src="../images/8.jpg" />
-							</div>
-							<p>搭讪素人美女带回家让她看到惊呆, 狂摸18公分大屌! 硬上插进她的粉嫩肉屄操到爽! ナンパ男のデカチン18cmを「ありえないウソだ」と言う美女にみるだけと房间に连れ込んで见せて触らせて「うわ!デカっ!こんなの入らな~い!うっぅぅ」とデカチンを插入!パコる!それも美女限定!一部始终を偷拍!<a href="#">更多...</a></p>
-						</div>
-					</article>
-					<div class="line"></div>
-					<article>
-						<a href="#"><h2 class="vid-name">只有各位老师才是永恒的</h2></a>
-						<div class="info">
-							<h5>By <a href="#">phoenix</a></h5>
-							<span><i class="fa fa-calendar"></i> June 12, 2015</span> 
-							<span><i class="fa fa-comment"></i> 0 Comments</span>
-							<span><i class="fa fa-heart"></i>1,200</span>
-							<ul class="list-inline">
-								<li><a href="#" style="text-decoration: underline;color:#333;">Rate</a></li>
-								<li> - </li>
-								<li>
-									<span class="rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-half-o"></i>
-									</span>
-								</li>
-							</ul>
-						</div>
-						<div class="wrap-vid">
-							<div class="zoom-container">
-								<div class="zoom-caption">
-									<span>标签分类</span>
-									<a href="single.html">
-										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-									</a>
-									<p>片子里的老公好惨</p>
-								</div>
-								<img src="../images/7.jpg" />
-							</div>
-							<p>搭讪素人美女带回家让她看到惊呆, 狂摸18公分大屌! 硬上插进她的粉嫩肉屄操到爽! ナンパ男のデカチン18cmを「ありえないウソだ」と言う美女にみるだけと房间に连れ込んで见せて触らせて「うわ!デカっ!こんなの入らな~い!うっぅぅ」とデカチンを插入!パコる!それも美女限定!一部始终を偷拍! <a href="#">更多...</a></p>
-						</div>
-					</article>
-					<div class="line"></div>
-					<article>
-						<a href="#"><h2 class="vid-name">只有各位老师才是永恒的</h2></a>
-						<div class="info">
-							<h5>By <a href="#">phoenix</a></h5>
-							<span><i class="fa fa-calendar"></i> June 12, 2015</span> 
-							<span><i class="fa fa-comment"></i> 0 Comments</span>
-							<span><i class="fa fa-heart"></i>1,200</span>
-							<ul class="list-inline">
-								<li><a href="#" style="text-decoration: underline;color:#333;">Rate</a></li>
-								<li> - </li>
-								<li>
-									<span class="rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-half-o"></i>
-									</span>
-								</li>
-							</ul>
-						</div>
-						<div class="wrap-vid">
-							<div class="zoom-container">
-								<div class="zoom-caption">
-									<span>标签分类</span>
-									<a href="single.html">
-										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-									</a>
-									<p>片子里的老公好惨</p>
-								</div>
-								<img src="../images/6.jpg" />
-							</div>
-							<p>搭讪素人美女带回家让她看到惊呆, 狂摸18公分大屌! 硬上插进她的粉嫩肉屄操到爽! ナンパ男のデカチン18cmを「ありえないウソだ」と言う美女にみるだけと房间に连れ込んで见せて触らせて「うわ!デカっ!こんなの入らな~い!うっぅぅ」とデカチンを插入!パコる!それも美女限定!一部始终を偷拍! <a href="#">更多...</a></p>
-						</div>
-					</article>
-					<div class="line"></div>
-					<article>
-						<a href="#"><h2 class="vid-name">只有各位老师才是永恒的</h2></a>
-						<div class="info">
-							<h5>By <a href="#">phoenix</a></h5>
-							<span><i class="fa fa-calendar"></i> June 12, 2015</span> 
-							<span><i class="fa fa-comment"></i> 0 Comments</span>
-							<span><i class="fa fa-heart"></i>1,200</span>
-							<ul class="list-inline">
-								<li><a href="#" style="text-decoration: underline;color:#333;">Rate</a></li>
-								<li> - </li>
-								<li>
-									<span class="rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-half-o"></i>
-									</span>
-								</li>
-							</ul>
-						</div>
-						<div class="wrap-vid">
-							<div class="zoom-container">
-								<div class="zoom-caption">
-									<span>标签分类</span>
-									<a href="single.html">
-										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-									</a>
-									<p>片子里的老公好惨</p>
-								</div>
-								<img src="../images/5.jpg" />
-							</div>
-							<p>搭讪素人美女带回家让她看到惊呆, 狂摸18公分大屌! 硬上插进她的粉嫩肉屄操到爽! ナンパ男のデカチン18cmを「ありえないウソだ」と言う美女にみるだけと房间に连れ込んで见せて触らせて「うわ!デカっ!こんなの入らな~い!うっぅぅ」とデカチンを插入!パコる!それも美女限定!一部始终を偷拍!<a href="#">更多...</a></p>
-						</div>
-					</article>
-					<center>
+					<?php } ?>
+
+			<!--		<center>
 						<ul class="pagination">
 							<li>
 							  <a href="#" aria-label="Previous">
@@ -225,7 +100,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							  </a>
 							</li>
 						</ul>
-					</center>
+					</center> -->
 				</div>
 				<?php echo $_smarty_tpl->getSubTemplate ('./public/sidebar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
