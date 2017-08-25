@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-22 11:25:22
+<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-25 17:05:47
          compiled from "./tpl/archive.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16903916445996a4eccc9510-41976012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '553729cb68b6aa05054562f7d38e18e29525bbd8' => 
     array (
       0 => './tpl/archive.tpl',
-      1 => 1503372317,
+      1 => 1503650653,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'searchs' => 0,
     'search' => 0,
+    'host' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -65,8 +66,9 @@ $_smarty_tpl->tpl_vars['search']->_loop = true;
 							<div class="zoom-container">
 								<div class="zoom-caption">
 									<span><?php echo $_smarty_tpl->tpl_vars['search']->value['keyword'];?>
-</span>
-									<a href="single?vid=<?php echo $_smarty_tpl->tpl_vars['search']->value['vid'];?>
+1</span>
+									<a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/single/<?php echo $_smarty_tpl->tpl_vars['search']->value['embedded_url_path'];?>
 ">
 										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
 									</a>

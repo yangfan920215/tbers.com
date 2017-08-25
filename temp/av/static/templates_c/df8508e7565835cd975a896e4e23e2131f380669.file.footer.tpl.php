@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-18 16:46:11
+<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-25 15:26:37
          compiled from "/data/wwwroot/tbers.com/temp/av/tpl/public/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12259968815996a95392fc19-54814946%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'df8508e7565835cd975a896e4e23e2131f380669' => 
     array (
       0 => '/data/wwwroot/tbers.com/temp/av/tpl/public/footer.tpl',
-      1 => 1503045707,
+      1 => 1503645994,
       2 => 'file',
     ),
   ),
@@ -15,20 +15,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1-DEV',
   'unifunc' => 'content_5996a953932a49_49714026',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5996a953932a49_49714026')) {function content_5996a953932a49_49714026($_smarty_tpl) {?><footer>
     <div class="top-footer">
         <ul class="footer-social list-inline">
-            <li><a href="#"><i class="fa fa-twitter"></i> <span>查番号</span></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i> <span>发车指南</span></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i> <span>首发动图</span></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i> <span>首发小说</span></a></li>
-            <li><a href="#"><i class="fa fa-vimeo-square"></i> <span>首发自拍</span></a></li>
-            <li><a href="#"><i class="fa fa-pinterest"></i> <span>首发动漫</span></a></li>
-            <li><a href="#"><i class="fa fa-rss"></i> <span>首发资源</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-twitter"></i> <span>查番号</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-facebook"></i> <span>发车指南</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-google-plus"></i> <span>首发动图</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-youtube"></i> <span>首发小说</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-vimeo-square"></i> <span>首发自拍</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-pinterest"></i> <span>首发动漫</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-rss"></i> <span>首发资源</span></a></li>
         </ul>
     </div>
     <div class="wrap-footer">

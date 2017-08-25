@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-18 16:54:33
+<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-25 17:25:13
          compiled from "/data/wwwroot/tbers.com/temp/av/tpl/public/sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1683151255996ab49ef0ff9-75297418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '75c0cb7f41436f1b03f12948cd320aa6fc234cbd' => 
     array (
       0 => '/data/wwwroot/tbers.com/temp/av/tpl/public/sidebar.tpl',
-      1 => 1503045761,
+      1 => 1503653106,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1-DEV',
   'unifunc' => 'content_5996ab49ef4694_27358094',
+  'variables' => 
+  array (
+    'tabs_sidebar' => 0,
+    'host' => 0,
+    'tab_sidebar' => 0,
+    'wifeVideos' => 0,
+    'wifeVideo' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5996ab49ef4694_27358094')) {function content_5996ab49ef4694_27358094($_smarty_tpl) {?><div id="sidebar" class="col-md-4">
     <!---- Start Widget ---->
@@ -26,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="content">
             <ul class="list-inline">
                 <li>
-                    <a href="facebook.com/">
+                    <a href="javascript:alert('暂未开放,敬请期待!')">
                         <div class="box-facebook">
                             <span class="fa fa-facebook fa-2x icon"></span>
                             <span>1250</span>
@@ -35,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </a>
                 </li>
                 <li>
-                    <a href="facebook.com/">
+                    <a href="javascript:alert('暂未开放,敬请期待!')">
                         <div class="box-twitter">
                             <span class="fa fa-twitter fa-2x icon"></span>
                             <span>1250</span>
@@ -44,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </a>
                 </li>
                 <li>
-                    <a href="facebook.com/">
+                    <a href="javascript:alert('暂未开放,敬请期待!')">
                         <div class="box-google">
                             <span class="fa fa-google-plus fa-2x icon"></span>
                             <span>1250</span>
@@ -62,82 +70,55 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="heading"><h4><i class="fa fa-tags"></i> Tag</h4></div>
         <div class="content">
             <ul class="list-inline">
-                <li><a href="#">素人 ,</a></li>
-                <li><a href="#">人妻 ,</a></li>
-                <li><a href="#">熟女 ,</a></li>
-                <li><a href="#">女子校生 ,</a></li>
-                <li><a href="#">职业 ,</a></li>
-                <li><a href="#">风俗 ,</a></li>
-                <li><a href="#">道具 ,</a></li>
-                <li><a href="#">女女</a></li>
+                <?php  $_smarty_tpl->tpl_vars['tab_sidebar'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tab_sidebar']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tabs_sidebar']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['tab_sidebar']->key => $_smarty_tpl->tpl_vars['tab_sidebar']->value){
+$_smarty_tpl->tpl_vars['tab_sidebar']->_loop = true;
+?>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['tab_sidebar']->value['decode'];?>
+"><?php echo $_smarty_tpl->tpl_vars['tab_sidebar']->value['name'];?>
+ ,</a></li>
+                <?php } ?>
             </ul>
         </div>
         <div class="line"></div>
     </div>
     <!---- Start Widget ---->
     <div class="widget wid-post">
-        <div class="heading"><h4><i class="fa fa-globe"></i> keyword</h4></div>
+        <div class="heading"><h4><i class="fa fa-globe"></i> 人妻</h4></div>
         <div class="content">
+
+            <?php  $_smarty_tpl->tpl_vars['wifeVideo'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['wifeVideo']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['wifeVideos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['wifeVideo']->key => $_smarty_tpl->tpl_vars['wifeVideo']->value){
+$_smarty_tpl->tpl_vars['wifeVideo']->_loop = true;
+?>
             <div class="post wrap-vid">
                 <div class="zoom-container">
                     <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
+                        <span></span>
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/single<?php echo $_smarty_tpl->tpl_vars['wifeVideo']->value['embedded_url_path'];?>
+">
                             <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
                         </a>
-                        <p>片子里的matt好惨</p>
+                        <p></p>
                     </div>
-                    <img src="../images/7.jpg" />
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['wifeVideo']->value['preview_url'];?>
+" />
                 </div>
                 <div class="wrapper">
-                    <h5 class="vid-name"><a href="#">片子里的matt好惨</a></h5>
+                    <h5 class="vid-name"><a href="#"><?php echo $_smarty_tpl->tpl_vars['wifeVideo']->value['keyword'];?>
+</a></h5>
                     <div class="info">
-                        <h6>By <a href="#">phoenix</a></h6>
+                        <h6>By <a href="#">matt</a></h6>
                         <span><i class="fa fa-calendar"></i>25/3/2015</span>
                         <span><i class="fa fa-heart"></i>1,200</span>
                     </div>
                 </div>
             </div>
-            <div class="post wrap-vid">
-                <div class="zoom-container">
-                    <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
-                            <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                        </a>
-                        <p>片子里的matt好惨</p>
-                    </div>
-                    <img src="../images/8.jpg" />
-                </div>
-                <div class="wrapper">
-                    <h5 class="vid-name"><a href="#">片子里的matt好惨</a></h5>
-                    <div class="info">
-                        <h6>By <a href="#">phoenix</a></h6>
-                        <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                        <span><i class="fa fa-heart"></i>1,200</span>
-                    </div>
-                </div>
-            </div>
-            <div class="post wrap-vid">
-                <div class="zoom-container">
-                    <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
-                            <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                        </a>
-                        <p>片子里的matt好惨</p>
-                    </div>
-                    <img src="../images/9.jpg" />
-                </div>
-                <div class="wrapper">
-                    <h5 class="vid-name"><a href="#">片子里的matt好惨</a></h5>
-                    <div class="info">
-                        <h6>By <a href="#">phoenix</a></h6>
-                        <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                        <span><i class="fa fa-heart"></i>1,200</span>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
         <div class="line"></div>
     </div>

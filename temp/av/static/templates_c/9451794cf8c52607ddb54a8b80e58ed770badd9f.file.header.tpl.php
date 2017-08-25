@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-22 16:44:18
+<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-25 17:22:05
          compiled from "/data/wwwroot/tbers.com/temp/av/tpl/public/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:70747308359967ebd682564-86118972%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9451794cf8c52607ddb54a8b80e58ed770badd9f' => 
     array (
       0 => '/data/wwwroot/tbers.com/temp/av/tpl/public/header.tpl',
-      1 => 1503391457,
+      1 => 1503652846,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'title' => 0,
-    'actresses_names' => 0,
-    'actresses_name' => 0,
-    'categories0' => 0,
+    'host' => 0,
+    'categories01' => 0,
     '_categories0' => 0,
-    'categories1' => 0,
+    'categories02' => 0,
     '_categories1' => 0,
-    'categories2' => 0,
+    'categories03' => 0,
     '_categories2' => 0,
+    'categories11' => 0,
+    'categories12' => 0,
+    'categories13' => 0,
+    'categories21' => 0,
+    'categories22' => 0,
+    'categories23' => 0,
     'hotVideos' => 0,
     'hotVideo' => 0,
     'qwe' => 0,
@@ -85,8 +90,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <ul class="list-inline top-link link">
-                        <li><a href="/index"><i class="fa fa-home"></i> 首页</a></li>
-                        <li><a href="./contact"><i class="fa fa-comments"></i> 找到我们</a></li>
+                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+index"><i class="fa fa-home"></i> 首页</a></li>
+                        <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-comments"></i> 找到我们</a></li>
                         <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-question-circle"></i> 发车指南</a></li>
                     </ul>
                 </div>
@@ -113,65 +119,133 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优推荐</a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优TOP30</a>
                         <div class="dropdown-menu">
                             <div class="dropdown-inner">
-                                <ul id="actresses_names" class="list-unstyled">
-                                    <?php  $_smarty_tpl->tpl_vars['actresses_name'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['actresses_name']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['actresses_names']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['actresses_name']->key => $_smarty_tpl->tpl_vars['actresses_name']->value){
-$_smarty_tpl->tpl_vars['actresses_name']->_loop = true;
+                                <ul id="categories01" class="list-unstyled">
+                                    <?php  $_smarty_tpl->tpl_vars['_categories0'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories0']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categories01']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['_categories0']->key => $_smarty_tpl->tpl_vars['_categories0']->value){
+$_smarty_tpl->tpl_vars['_categories0']->_loop = true;
 ?>
-                                        <li><a href="./archive?key=<?php echo $_smarty_tpl->tpl_vars['actresses_name']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['actresses_name']->value;?>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories0']->value['decode'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_categories0']->value['name'];?>
+</a></li>
+                                    <?php } ?>
+                                </ul>
+                                <ul id="categories02" class="list-unstyled">
+                                    <?php  $_smarty_tpl->tpl_vars['_categories1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories1']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categories02']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['_categories1']->key => $_smarty_tpl->tpl_vars['_categories1']->value){
+$_smarty_tpl->tpl_vars['_categories1']->_loop = true;
+?>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories1']->value['decode'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_categories1']->value['name'];?>
+</a></li>
+                                    <?php } ?>
+                                </ul>
+                                <ul id="categories03" class="list-unstyled">
+                                    <?php  $_smarty_tpl->tpl_vars['_categories2'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories2']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categories03']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['_categories2']->key => $_smarty_tpl->tpl_vars['_categories2']->value){
+$_smarty_tpl->tpl_vars['_categories2']->_loop = true;
+?>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories2']->value['decode'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_categories2']->value['name'];?>
 </a></li>
                                     <?php } ?>
                                 </ul>
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list"></i> 口味</a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优TOP60</a>
                         <div class="dropdown-menu" style="margin-left: -203.625px;">
                             <div class="dropdown-inner">
-
                                 <ul id="categories0" class="list-unstyled">
                                     <?php  $_smarty_tpl->tpl_vars['_categories0'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories0']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['categories0']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['categories11']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['_categories0']->key => $_smarty_tpl->tpl_vars['_categories0']->value){
 $_smarty_tpl->tpl_vars['_categories0']->_loop = true;
 ?>
-                                        <li><a href="archive.html?chid=<?php echo $_smarty_tpl->tpl_vars['_categories0']->value['CHID'];?>
+                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories0']->value['decode'];?>
 "><?php echo $_smarty_tpl->tpl_vars['_categories0']->value['name'];?>
 </a></li>
                                     <?php } ?>
                                 </ul>
                                 <ul id="categories1" class="list-unstyled">
                                     <?php  $_smarty_tpl->tpl_vars['_categories1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories1']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['categories1']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['categories12']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['_categories1']->key => $_smarty_tpl->tpl_vars['_categories1']->value){
 $_smarty_tpl->tpl_vars['_categories1']->_loop = true;
 ?>
-                                        <li><a href="archive.html?chid=<?php echo $_smarty_tpl->tpl_vars['_categories1']->value['CHID'];?>
+                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories1']->value['decode'];?>
 "><?php echo $_smarty_tpl->tpl_vars['_categories1']->value['name'];?>
 </a></li>
                                     <?php } ?>
                                 </ul>
                                 <ul id="categories2" class="list-unstyled">
                                     <?php  $_smarty_tpl->tpl_vars['_categories2'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories2']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['categories2']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['categories13']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['_categories2']->key => $_smarty_tpl->tpl_vars['_categories2']->value){
 $_smarty_tpl->tpl_vars['_categories2']->_loop = true;
 ?>
-                                        <li><a href="archive.html?chid=<?php echo $_smarty_tpl->tpl_vars['_categories2']->value['CHID'];?>
+                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories2']->value['decode'];?>
 "><?php echo $_smarty_tpl->tpl_vars['_categories2']->value['name'];?>
 </a></li>
                                     <?php } ?>
                                 </ul>
-
                             </div>
                         </div>
                     </li>
-                    <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-cubes"></i> 中文字幕</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优TOP100</a>
+                        <div class="dropdown-menu" style="margin-left: -203.625px;">
+                            <div class="dropdown-inner">
+
+                                <ul id="categories0" class="list-unstyled">
+                                    <?php  $_smarty_tpl->tpl_vars['_categories0'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories0']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categories21']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['_categories0']->key => $_smarty_tpl->tpl_vars['_categories0']->value){
+$_smarty_tpl->tpl_vars['_categories0']->_loop = true;
+?>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories0']->value['decode'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_categories0']->value['name'];?>
+</a></li>
+                                    <?php } ?>
+                                </ul>
+                                <ul id="categories1" class="list-unstyled">
+                                    <?php  $_smarty_tpl->tpl_vars['_categories1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories1']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categories22']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['_categories1']->key => $_smarty_tpl->tpl_vars['_categories1']->value){
+$_smarty_tpl->tpl_vars['_categories1']->_loop = true;
+?>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories1']->value['decode'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_categories1']->value['name'];?>
+</a></li>
+                                    <?php } ?>
+                                </ul>
+                                <ul id="categories2" class="list-unstyled">
+                                    <?php  $_smarty_tpl->tpl_vars['_categories2'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_categories2']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categories23']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['_categories2']->key => $_smarty_tpl->tpl_vars['_categories2']->value){
+$_smarty_tpl->tpl_vars['_categories2']->_loop = true;
+?>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/archive/<?php echo $_smarty_tpl->tpl_vars['_categories2']->value['decode'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_categories2']->value['name'];?>
+</a></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="../contact.html"><i class="fa fa-envelope"></i>找到我们</a></li>
                 </ul>
             </div>
@@ -190,7 +264,8 @@ $_smarty_tpl->tpl_vars['hotVideo']->_loop = true;
                         <div class="zoom-caption">
                             <span><?php echo $_smarty_tpl->tpl_vars['hotVideo']->value['keyword'];?>
 </span>
-                            <a href="single<?php echo $_smarty_tpl->tpl_vars['hotVideo']->value['embedded_url_path'];?>
+                            <a href="<?php echo $_smarty_tpl->tpl_vars['host']->value;?>
+/single<?php echo $_smarty_tpl->tpl_vars['hotVideo']->value['embedded_url_path'];?>
 ">
                                 <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
                             </a>

@@ -1,13 +1,13 @@
 <footer>
     <div class="top-footer">
         <ul class="footer-social list-inline">
-            <li><a href="#"><i class="fa fa-twitter"></i> <span>查番号</span></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i> <span>发车指南</span></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i> <span>首发动图</span></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i> <span>首发小说</span></a></li>
-            <li><a href="#"><i class="fa fa-vimeo-square"></i> <span>首发自拍</span></a></li>
-            <li><a href="#"><i class="fa fa-pinterest"></i> <span>首发动漫</span></a></li>
-            <li><a href="#"><i class="fa fa-rss"></i> <span>首发资源</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-twitter"></i> <span>查番号</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-facebook"></i> <span>发车指南</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-google-plus"></i> <span>首发动图</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-youtube"></i> <span>首发小说</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-vimeo-square"></i> <span>首发自拍</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-pinterest"></i> <span>首发动漫</span></a></li>
+            <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-rss"></i> <span>首发资源</span></a></li>
         </ul>
     </div>
     <div class="wrap-footer">

@@ -5,7 +5,7 @@
         <div class="content">
             <ul class="list-inline">
                 <li>
-                    <a href="facebook.com/">
+                    <a href="javascript:alert('暂未开放,敬请期待!')">
                         <div class="box-facebook">
                             <span class="fa fa-facebook fa-2x icon"></span>
                             <span>1250</span>
@@ -14,7 +14,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="facebook.com/">
+                    <a href="javascript:alert('暂未开放,敬请期待!')">
                         <div class="box-twitter">
                             <span class="fa fa-twitter fa-2x icon"></span>
                             <span>1250</span>
@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="facebook.com/">
+                    <a href="javascript:alert('暂未开放,敬请期待!')">
                         <div class="box-google">
                             <span class="fa fa-google-plus fa-2x icon"></span>
                             <span>1250</span>
@@ -41,82 +41,40 @@
         <div class="heading"><h4><i class="fa fa-tags"></i> Tag</h4></div>
         <div class="content">
             <ul class="list-inline">
-                <li><a href="#">素人 ,</a></li>
-                <li><a href="#">人妻 ,</a></li>
-                <li><a href="#">熟女 ,</a></li>
-                <li><a href="#">女子校生 ,</a></li>
-                <li><a href="#">职业 ,</a></li>
-                <li><a href="#">风俗 ,</a></li>
-                <li><a href="#">道具 ,</a></li>
-                <li><a href="#">女女</a></li>
+                <{foreach $tabs_sidebar as $tab_sidebar}>
+                <li><a href="<{$host}>/archive/<{$tab_sidebar.decode}>"><{$tab_sidebar.name}> ,</a></li>
+                <{/foreach}>
             </ul>
         </div>
         <div class="line"></div>
     </div>
     <!---- Start Widget ---->
     <div class="widget wid-post">
-        <div class="heading"><h4><i class="fa fa-globe"></i> keyword</h4></div>
+        <div class="heading"><h4><i class="fa fa-globe"></i> 人妻</h4></div>
         <div class="content">
+
+            <{foreach $wifeVideos as $wifeVideo}>
             <div class="post wrap-vid">
                 <div class="zoom-container">
                     <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
+                        <span></span>
+                        <a href="<{$host}>/single<{$wifeVideo['embedded_url_path']}>">
                             <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
                         </a>
-                        <p>片子里的matt好惨</p>
+                        <p></p>
                     </div>
-                    <img src="../images/7.jpg" />
+                    <img src="<{$wifeVideo.preview_url}>" />
                 </div>
                 <div class="wrapper">
-                    <h5 class="vid-name"><a href="#">片子里的matt好惨</a></h5>
+                    <h5 class="vid-name"><a href="#"><{$wifeVideo.keyword}></a></h5>
                     <div class="info">
-                        <h6>By <a href="#">phoenix</a></h6>
+                        <h6>By <a href="#">matt</a></h6>
                         <span><i class="fa fa-calendar"></i>25/3/2015</span>
                         <span><i class="fa fa-heart"></i>1,200</span>
                     </div>
                 </div>
             </div>
-            <div class="post wrap-vid">
-                <div class="zoom-container">
-                    <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
-                            <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                        </a>
-                        <p>片子里的matt好惨</p>
-                    </div>
-                    <img src="../images/8.jpg" />
-                </div>
-                <div class="wrapper">
-                    <h5 class="vid-name"><a href="#">片子里的matt好惨</a></h5>
-                    <div class="info">
-                        <h6>By <a href="#">phoenix</a></h6>
-                        <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                        <span><i class="fa fa-heart"></i>1,200</span>
-                    </div>
-                </div>
-            </div>
-            <div class="post wrap-vid">
-                <div class="zoom-container">
-                    <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
-                            <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                        </a>
-                        <p>片子里的matt好惨</p>
-                    </div>
-                    <img src="../images/9.jpg" />
-                </div>
-                <div class="wrapper">
-                    <h5 class="vid-name"><a href="#">片子里的matt好惨</a></h5>
-                    <div class="info">
-                        <h6>By <a href="#">phoenix</a></h6>
-                        <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                        <span><i class="fa fa-heart"></i>1,200</span>
-                    </div>
-                </div>
-            </div>
+            <{/foreach}>
         </div>
         <div class="line"></div>
     </div>

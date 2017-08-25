@@ -48,8 +48,8 @@
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <ul class="list-inline top-link link">
-                        <li><a href="/index"><i class="fa fa-home"></i> 首页</a></li>
-                        <li><a href="./contact"><i class="fa fa-comments"></i> 找到我们</a></li>
+                        <li><a href="<{$host}>index"><i class="fa fa-home"></i> 首页</a></li>
+                        <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-comments"></i> 找到我们</a></li>
                         <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-question-circle"></i> 发车指南</a></li>
                     </ul>
                 </div>
@@ -76,41 +76,70 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优推荐</a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优TOP30</a>
                         <div class="dropdown-menu">
                             <div class="dropdown-inner">
-                                <ul id="actresses_names" class="list-unstyled">
-                                    <{foreach $actresses_names as $actresses_name}>
-                                        <li><a href="./archive?key=<{$actresses_name}>"><{$actresses_name}></a></li>
+                                <ul id="categories01" class="list-unstyled">
+                                    <{foreach $categories01 as $_categories0}>
+                                    <li><a href="<{$host}>/archive/<{$_categories0.decode}>"><{$_categories0.name}></a></li>
+                                    <{/foreach}>
+                                </ul>
+                                <ul id="categories02" class="list-unstyled">
+                                    <{foreach $categories02 as $_categories1}>
+                                    <li><a href="<{$host}>/archive/<{$_categories1.decode}>"><{$_categories1.name}></a></li>
+                                    <{/foreach}>
+                                </ul>
+                                <ul id="categories03" class="list-unstyled">
+                                    <{foreach $categories03 as $_categories2}>
+                                    <li><a href="<{$host}>/archive/<{$_categories2.decode}>"><{$_categories2.name}></a></li>
                                     <{/foreach}>
                                 </ul>
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list"></i> 口味</a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优TOP60</a>
+                        <div class="dropdown-menu" style="margin-left: -203.625px;">
+                            <div class="dropdown-inner">
+                                <ul id="categories0" class="list-unstyled">
+                                    <{foreach $categories11 as $_categories0}>
+                                        <li><a href="<{$host}>/archive/<{$_categories0.decode}>"><{$_categories0.name}></a></li>
+                                    <{/foreach}>
+                                </ul>
+                                <ul id="categories1" class="list-unstyled">
+                                    <{foreach $categories12 as $_categories1}>
+                                        <li><a href="<{$host}>/archive/<{$_categories1.decode}>"><{$_categories1.name}></a></li>
+                                    <{/foreach}>
+                                </ul>
+                                <ul id="categories2" class="list-unstyled">
+                                    <{foreach $categories13 as $_categories2}>
+                                        <li><a href="<{$host}>/archive/<{$_categories2.decode}>"><{$_categories2.name}></a></li>
+                                    <{/foreach}>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> 女优TOP100</a>
                         <div class="dropdown-menu" style="margin-left: -203.625px;">
                             <div class="dropdown-inner">
 
                                 <ul id="categories0" class="list-unstyled">
-                                    <{foreach $categories0 as $_categories0}>
-                                        <li><a href="archive.html?chid=<{$_categories0.CHID}>"><{$_categories0.name}></a></li>
+                                    <{foreach $categories21 as $_categories0}>
+                                    <li><a href="<{$host}>/archive/<{$_categories0.decode}>"><{$_categories0.name}></a></li>
                                     <{/foreach}>
                                 </ul>
                                 <ul id="categories1" class="list-unstyled">
-                                    <{foreach $categories1 as $_categories1}>
-                                        <li><a href="archive.html?chid=<{$_categories1.CHID}>"><{$_categories1.name}></a></li>
+                                    <{foreach $categories22 as $_categories1}>
+                                    <li><a href="<{$host}>/archive/<{$_categories1.decode}>"><{$_categories1.name}></a></li>
                                     <{/foreach}>
                                 </ul>
                                 <ul id="categories2" class="list-unstyled">
-                                    <{foreach $categories2 as $_categories2}>
-                                        <li><a href="archive.html?chid=<{$_categories2.CHID}>"><{$_categories2.name}></a></li>
+                                    <{foreach $categories23 as $_categories2}>
+                                    <li><a href="<{$host}>/archive/<{$_categories2.decode}>"><{$_categories2.name}></a></li>
                                     <{/foreach}>
                                 </ul>
-
                             </div>
                         </div>
                     </li>
-                    <li><a href="javascript:alert('暂未开放,敬请期待!')"><i class="fa fa-cubes"></i> 中文字幕</a></li>
                     <li><a href="../contact.html"><i class="fa fa-envelope"></i>找到我们</a></li>
                 </ul>
             </div>
@@ -124,7 +153,7 @@
                     <div class="zoom-container">
                         <div class="zoom-caption">
                             <span><{$hotVideo['keyword']}></span>
-                            <a href="single<{$hotVideo['embedded_url_path']}>">
+                            <a href="<{$host}>/single<{$hotVideo['embedded_url_path']}>">
                                 <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
                             </a>
                             <p><{$hotVideo['title']}></p>

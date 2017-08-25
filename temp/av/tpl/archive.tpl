@@ -31,8 +31,8 @@
 						<div class="wrap-vid">
 							<div class="zoom-container">
 								<div class="zoom-caption">
-									<span><{$search.keyword}></span>
-									<a href="single?video=<{$search.vid}>">
+									<span><{$search.keyword}>1</span>
+									<a href="<{$host}>/single/<{$search.embedded_url_path}>">
 										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
 									</a>
 									<p></p>

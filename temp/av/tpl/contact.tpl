@@ -36,20 +36,20 @@
 <{include './public/footer.tpl'}>
 
 <script>
-    $(function(){
-        $('#contact_button').click(function(){
+    $(function() {
+        $('#contact_button').click(function () {
             var qq = $('#qq').val();
             var email = $('#email').val();
 
             // 验证QQ号是否合规
             var reQQ = /^[1-9]\d{4,9}$/;
-            if(!reQQ.test(qq)){
+            if (!reQQ.test(qq)) {
                 alert('QQ号码为空或格式不正确,请修正后重新输入！');
                 return;
             }
             // 验证邮箱是否合规
             var reEmail = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
-            if(!reEmail.test(email)){
+            if (!reEmail.test(email)) {
                 alert('邮箱为空或格式不正确,请修正后重新输入!');
                 return;
             }
@@ -59,8 +59,8 @@
                 url: "http://core.app/contact",
                 data: {'qq':qq,'email':email},
                 dataType: "json",
-                success: function(data){
-                    if(data.status == undefined || data.status !== 0){
+                success: function (data) {
+                    if (data.status == undefined || data.status !== 0) {
                         var msg = data.msg == undefined ? '服务器繁忙,请稍后重试!' : data.msg;
                         alert(msg);
                         return;
@@ -79,4 +79,5 @@
                 }
             });
         });
+    });
 </script>
