@@ -69,7 +69,6 @@ $server = array (
 $redis = new \Predis\Client($server);
 
 $data['categories'] = json_decode($redis->get('avgle_categories'), true);
-$data['actresses_names'] = $tabs_name;
 $data['hotVideos'] = json_decode($redis->get('avgle_chid_' . $head), true);
 sortByColumn($data['hotVideos'],  'viewnumber');
 
