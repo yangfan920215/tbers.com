@@ -204,28 +204,6 @@ switch ($file){
         $smarty->assign('searchs', $data['searchs']);
 
         break;
-    case './tpl/single.tpl':
-        $client = new  GuzzleHttp\Client([
-            // Base URI is used with relative requests
-            'base_uri' => 'http://av.app/',
-            // You can set any number of default request options.
-            'timeout'  => 10.0,
-        ]);
-
-        try {
-            // 获取数据
-            $response = $client->get('http://core.app/avgleinit');
-            $data = json_decode($response->getBody(), true);
-            $data = $data['data'];
-
-            $smarty->assign('av', $av);
-        } catch (GuzzleHttp\Exception\GuzzleException $e) {
-            echo (string) $e->getResponse()->getBody();
-            exit;
-        }
-
-        $video_url = isset($_GET['video']) ? $_GET['video'] : header('./index');
-        break;
 }
 
 
@@ -309,7 +287,7 @@ $wifeVideos = array_slice($wifeVideos , 0, 3);
 
 
 $smarty->assign('wifeVideos', $wifeVideos);
-
+$smarty->assign('av', $av);
 $smarty->assign('tabs_sidebar', $data['tabs_sidebar']);
 $smarty->assign('host', getHost());
 $smarty->display($file);

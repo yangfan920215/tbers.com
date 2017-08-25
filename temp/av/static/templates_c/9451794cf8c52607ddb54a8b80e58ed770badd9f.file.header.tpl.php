@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-25 17:22:05
+<?php /* Smarty version Smarty-3.1-DEV, created on 2017-08-25 17:58:54
          compiled from "/data/wwwroot/tbers.com/temp/av/tpl/public/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:70747308359967ebd682564-86118972%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9451794cf8c52607ddb54a8b80e58ed770badd9f' => 
     array (
       0 => '/data/wwwroot/tbers.com/temp/av/tpl/public/header.tpl',
-      1 => 1503652846,
+      1 => 1503654981,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'categories23' => 0,
     'hotVideos' => 0,
     'hotVideo' => 0,
-    'qwe' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -279,6 +278,4 @@ $_smarty_tpl->tpl_vars['hotVideo']->_loop = true;
             <?php } ?>
         </div>
     </div>
-</header>
-<?php echo $_smarty_tpl->tpl_vars['qwe']->value;?>
-<?php }} ?>
+</header><?php }} ?>
