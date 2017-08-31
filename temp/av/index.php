@@ -69,6 +69,7 @@ $server = array (
 $redis = new \Predis\Client($server);
 
 $data['categories'] = json_decode($redis->get('avgle_categories'), true);
+
 $data['hotVideos'] = json_decode($redis->get('avgle_chid_' . $head), true);
 sortByColumn($data['hotVideos'],  'viewnumber');
 
@@ -284,9 +285,18 @@ foreach ($wifeVideos as $key => &$wifeVideo) {
     $wifeVideo['keyword'] = strlen($wifeVideo['keyword']) > 5 ? mb_substr($wifeVideo['keyword'], 0, 5) : $wifeVideo['keyword'];
 }
 $wifeVideos = array_slice($wifeVideos , 0, 3);
-
-
 $smarty->assign('wifeVideos', $wifeVideos);
+// 素人
+$surenVideos = json_decode($redis->get('avgle_chid_' . $suren), true);
+sortByColumn($surenVideos,  'viewnumber');
+createEmbedded_url($surenVideos);
+foreach ($surenVideos as $key => &$surenVideo) {
+    $surenVideo['keyword'] = strlen($surenVideo['keyword']) > 5 ? mb_substr($surenVideo['keyword'], 0, 5) : $surenVideo['keyword'];
+}
+$surenVideos = array_slice($surenVideos , 0, 3);
+$smarty->assign('surenVideos', $surenVideos);
+
+
 $smarty->assign('av', $av);
 $smarty->assign('tabs_sidebar', $data['tabs_sidebar']);
 $smarty->assign('host', getHost());

@@ -80,62 +80,28 @@
     </div>
     <!---- Start Widget ---->
     <div class="widget wid-news">
-        <div class="heading"><h4><i class="fa fa-clock-o"></i> Top News</h4></div>
+        <div class="heading"><h4><i class="fa fa-clock-o"></i> 人 妻</h4></div>
         <div class="content">
+            <{foreach $surenVideos as $surenVideo}>
             <div class="wrap-vid">
                 <div class="zoom-container">
                     <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
+                        <span><{$surenVideo.keyword}></span>
+                        <a href="<{$host}>/single<{$surenVideo['embedded_url_path']}>">
                             <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
                         </a>
-                        <p>片子里的matt好惨</p>
+                        <p><{$surenVideo.keyword}></p>
                     </div>
-                    <img src="../images/3.jpg" />
+                    <img src="<{$surenVideo.preview_url}>" />
                 </div>
-                <h3 class="vid-name"><a href="#">片子里的matt好惨</a></h3>
+                <h3 class="vid-name"><a href="#"><{$surenVideo.keyword}></a></h3>
                 <div class="info">
-                    <h5>By <a href="#">phoenix</a></h5>
+                    <h5>By <a href="#">matt</a></h5>
                     <span><i class="fa fa-calendar"></i>25/3/2015</span>
                     <span><i class="fa fa-heart"></i>1,200</span>
                 </div>
             </div>
-            <div class="wrap-vid">
-                <div class="zoom-container">
-                    <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
-                            <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                        </a>
-                        <p>片子里的matt好惨</p>
-                    </div>
-                    <img src="../images/4.jpg" />
-                </div>
-                <h3 class="vid-name"><a href="#">片子里的matt好惨</a></h3>
-                <div class="info">
-                    <h5>By <a href="#">phoenix</a></h5>
-                    <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                    <span><i class="fa fa-heart"></i>1,200</span>
-                </div>
-            </div>
-            <div class="wrap-vid">
-                <div class="zoom-container">
-                    <div class="zoom-caption">
-                        <span>keyword</span>
-                        <a href="single.html">
-                            <i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
-                        </a>
-                        <p>片子里的matt好惨</p>
-                    </div>
-                    <img src="../images/5.jpg" />
-                </div>
-                <h3 class="vid-name"><a href="#">片子里的matt好惨</a></h3>
-                <div class="info">
-                    <h5>By <a href="#">phoenix</a></h5>
-                    <span><i class="fa fa-calendar"></i>25/3/2015</span>
-                    <span><i class="fa fa-heart"></i>1,200</span>
-                </div>
-            </div>
+            <{/foreach}>
         </div>
         <div class="line"></div>
     </div>
